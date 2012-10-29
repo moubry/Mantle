@@ -7,6 +7,7 @@
 //
 
 #import "MTLModel.h"
+#import "MTLSequence.h"
 #import "MTLValueTransformer.h"
 #import "NSArray+MTLHigherOrderAdditions.h"
 #import "NSArray+MTLManipulationAdditions.h"

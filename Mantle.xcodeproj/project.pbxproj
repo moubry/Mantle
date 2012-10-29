@@ -17,6 +17,9 @@
 		88080C1A160A706900CCABF2 /* NSArray+MTLManipulationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 88080C17160A706900CCABF2 /* NSArray+MTLManipulationAdditions.m */; };
 		88080C1D160A719D00CCABF2 /* MTLArrayManipulationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 88080C1C160A719D00CCABF2 /* MTLArrayManipulationSpec.m */; };
 		88080C1E160A719D00CCABF2 /* MTLArrayManipulationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 88080C1C160A719D00CCABF2 /* MTLArrayManipulationSpec.m */; };
+		D011F5D9163F3E4C0011B2F3 /* MTLSequence.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F5D7163F3E4C0011B2F3 /* MTLSequence.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D011F5DA163F3E4C0011B2F3 /* MTLSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = D011F5D8163F3E4C0011B2F3 /* MTLSequence.m */; };
+		D011F5DB163F3E4C0011B2F3 /* MTLSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = D011F5D8163F3E4C0011B2F3 /* MTLSequence.m */; };
 		D042FC4A15F72B23004E8054 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D042FC4815F72B23004E8054 /* InfoPlist.strings */; };
 		D042FC5615F72B23004E8054 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D042FC5515F72B23004E8054 /* SenTestingKit.framework */; };
 		D042FC5A15F72B23004E8054 /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D042FC3C15F72B23004E8054 /* Mantle.framework */; };
@@ -200,6 +203,8 @@
 		88080C16160A706900CCABF2 /* NSArray+MTLManipulationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MTLManipulationAdditions.h"; sourceTree = "<group>"; };
 		88080C17160A706900CCABF2 /* NSArray+MTLManipulationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MTLManipulationAdditions.m"; sourceTree = "<group>"; };
 		88080C1C160A719D00CCABF2 /* MTLArrayManipulationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTLArrayManipulationSpec.m; sourceTree = "<group>"; };
+		D011F5D7163F3E4C0011B2F3 /* MTLSequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTLSequence.h; sourceTree = "<group>"; };
+		D011F5D8163F3E4C0011B2F3 /* MTLSequence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTLSequence.m; sourceTree = "<group>"; };
 		D042FC3C15F72B23004E8054 /* Mantle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Mantle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D042FC4415F72B23004E8054 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D042FC4715F72B23004E8054 /* Mantle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mantle-Info.plist"; sourceTree = "<group>"; };
@@ -455,6 +460,8 @@
 			children = (
 				D0760E7615FFBF330060F550 /* MTLModel.h */,
 				D0760E7715FFBF330060F550 /* MTLModel.m */,
+				D011F5D7163F3E4C0011B2F3 /* MTLSequence.h */,
+				D011F5D8163F3E4C0011B2F3 /* MTLSequence.m */,
 				D08B5AAC16002694001FE685 /* MTLValueTransformer.h */,
 				D08B5AAD16002694001FE685 /* MTLValueTransformer.m */,
 			);
@@ -555,6 +562,7 @@
 				D0C27D0A16110973002FE587 /* NSDictionary+MTLManipulationAdditions.h in Headers */,
 				D0F117491614C5600092520B /* NSValueTransformer+MTLPredefinedTransformerAdditions.h in Headers */,
 				1ED5B5D0163A4E3C0072668E /* NSObject+MTLComparisonAdditions.h in Headers */,
+				D011F5D9163F3E4C0011B2F3 /* MTLSequence.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -809,6 +817,7 @@
 				D0F1174A1614C5600092520B /* NSValueTransformer+MTLPredefinedTransformerAdditions.m in Sources */,
 				D0CA639B1624051A0030AD06 /* EXTRuntimeExtensions.m in Sources */,
 				1ED5B5D1163A4E3C0072668E /* NSObject+MTLComparisonAdditions.m in Sources */,
+				D011F5DA163F3E4C0011B2F3 /* MTLSequence.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -846,6 +855,7 @@
 				D0F1174B1614C5600092520B /* NSValueTransformer+MTLPredefinedTransformerAdditions.m in Sources */,
 				D0CA639C1624051B0030AD06 /* EXTRuntimeExtensions.m in Sources */,
 				1ED5B5D2163A4E3C0072668E /* NSObject+MTLComparisonAdditions.m in Sources */,
+				D011F5DB163F3E4C0011B2F3 /* MTLSequence.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
