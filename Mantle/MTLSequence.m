@@ -7,8 +7,15 @@
 //
 
 #import "MTLSequence.h"
+#import "MTLEmptySequence.h"
 
 @implementation MTLSequence
+
+#pragma mark Lifecycle
+
++ (MTLSequence *)emptySequence {
+	return MTLEmptySequence.emptySequence;
+}
 
 #pragma mark Class cluster primitives
 

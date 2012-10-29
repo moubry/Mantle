@@ -27,6 +27,9 @@
 // Evaluates the full sequence to produce an equivalently-sized array.
 @property (nonatomic, copy, readonly) NSArray *array;
 
+// Returns an empty sequence.
++ (MTLSequence *)emptySequence;
+
 // Returns all but the first `count` objects in the sequence. If `count` exceeds
 // the number of items in the sequence, nil is returned.
 - (MTLSequence *)drop:(NSUInteger)count;
