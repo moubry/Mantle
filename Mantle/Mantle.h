@@ -14,6 +14,7 @@
 #import "NSArray+MTLSequenceAdditions.h"
 #import "NSDictionary+MTLHigherOrderAdditions.h"
 #import "NSDictionary+MTLManipulationAdditions.h"
+#import "NSDictionary+MTLSequenceAdditions.h"
 #import "NSNotificationCenter+MTLWeakReferenceAdditions.h"
 #import "NSObject+MTLComparisonAdditions.h"
 #import "NSOrderedSet+MTLHigherOrderAdditions.h"
