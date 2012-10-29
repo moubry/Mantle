@@ -11,6 +11,7 @@
 #import "MTLValueTransformer.h"
 #import "NSArray+MTLHigherOrderAdditions.h"
 #import "NSArray+MTLManipulationAdditions.h"
+#import "NSArray+MTLSequenceAdditions.h"
 #import "NSDictionary+MTLHigherOrderAdditions.h"
 #import "NSDictionary+MTLManipulationAdditions.h"
 #import "NSNotificationCenter+MTLWeakReferenceAdditions.h"
