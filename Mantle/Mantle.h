@@ -17,5 +17,6 @@
 #import "NSNotificationCenter+MTLWeakReferenceAdditions.h"
 #import "NSOrderedSet+MTLHigherOrderAdditions.h"
 #import "NSSet+MTLHigherOrderAdditions.h"
+#import "NSSet+MTLSequenceAdditions.h"
 #import "NSValueTransformer+MTLPredefinedTransformerAdditions.h"
 #import "NSObject+MTLComparisonAdditions.h"
