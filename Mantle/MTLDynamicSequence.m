@@ -28,6 +28,17 @@
 	return seq;
 }
 
++ (MTLSequence *)sequenceWithGeneratorBlock:(id (^)(id))generatorBlock startingValue:(id)value {
+	NSParameterAssert(generatorBlock != nil);
+
+	return [self sequenceWithHeadBlock:^{
+		return value;
+	} tailBlock:^ MTLSequence * {
+		if (value == nil) return nil;
+		return [self sequenceWithGeneratorBlock:generatorBlock startingValue:generatorBlock(value)];
+	}];
+}
+
 #pragma mark MTLSequence
 
 - (id)head {

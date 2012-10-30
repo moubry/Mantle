@@ -15,4 +15,8 @@
 // tail. `headBlock` must not be nil.
 + (MTLSequence *)sequenceWithHeadBlock:(id (^)(void))headBlock tailBlock:(MTLSequence *(^)(void))tailBlock;
 
+// Returns a sequence of `value`, `generatorBlock(value)`,
+// `generatorBlock(generatorBlock(value))`, etc.
++ (MTLSequence *)sequenceWithGeneratorBlock:(id (^)(id))generatorBlock startingValue:(id)value;
+
 @end
