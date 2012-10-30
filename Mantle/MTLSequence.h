@@ -12,7 +12,7 @@
 // sequences cannot contain nil.
 //
 // Implemented as a class cluster.
-@interface MTLSequence : NSObject <NSCopying, NSFastEnumeration>
+@interface MTLSequence : NSObject <NSCoding, NSCopying, NSFastEnumeration>
 
 // The first object in the sequence, or nil if the sequence is empty.
 //

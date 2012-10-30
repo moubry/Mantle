@@ -54,6 +54,23 @@
 }
 #pragma clang diagnostic pop
 
+#pragma mark NSCoding
+
+- (id)initWithCoder:(NSCoder *)coder {
+	self = [super initWithCoder:coder];
+	if (self == nil) return nil;
+
+	_backingArray = [coder decodeObjectForKey:@"array"];
+	_offset = 0;
+
+	return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder {
+	// Encoding is handled in MTLSequence.
+	[super encodeWithCoder:coder];
+}
+
 #pragma mark NSObject
 
 - (NSString *)description {

@@ -7,6 +7,7 @@
 //
 
 #import "MTLSequence.h"
+#import "MTLArraySequence.h"
 #import "MTLEmptySequence.h"
 
 @implementation MTLSequence
@@ -53,6 +54,24 @@
 
 - (id)copyWithZone:(NSZone *)zone {
 	return self;
+}
+
+#pragma mark NSCoding
+
+- (Class)classForCoder {
+	// All sequences should be archived as MTLArraySequences.
+	return MTLArraySequence.class;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+	if (![self isKindOfClass:MTLArraySequence.class]) return [[MTLArraySequence alloc] initWithCoder:coder];
+
+	// Decoding is handled in MTLArraySequence.
+	return [super init];
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder {
+	[coder encodeObject:self.array forKey:@"array"];
 }
 
 #pragma mark NSFastEnumeration
