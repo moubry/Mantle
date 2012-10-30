@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 GitHub. All rights reserved.
 //
 
+#import "MTLDynamicSequence.h"
 #import "MTLModel.h"
 #import "MTLSequence.h"
 #import "MTLValueTransformer.h"
