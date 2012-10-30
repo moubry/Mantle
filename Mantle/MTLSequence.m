@@ -25,6 +25,10 @@
 	} tailBlock:nil];
 }
 
++ (MTLSequence *)sequenceWithConcatenatedSequences:(NSArray *)seqs {
+	return [MTLArraySequence sequenceWithArray:seqs offset:0].flattenedSequence;
+}
+
 #pragma mark Class cluster primitives
 
 - (id)head {
@@ -58,11 +62,41 @@
 }
 
 - (MTLSequence *)sequenceByPrependingObject:(id)obj {
+	NSParameterAssert(obj != nil);
+
 	return [MTLDynamicSequence sequenceWithHeadBlock:^{
 		return obj;
 	} tailBlock:^{
 		return self;
 	}];
+}
+
+- (MTLSequence *)flattenedSequence {
+	__block MTLSequence *(^nextSequence)(MTLSequence *, MTLSequence *);
+	
+	nextSequence = [^ MTLSequence * (MTLSequence *current, MTLSequence *remainingSeqs) {
+		if (current == nil) {
+			// We've exhausted one sequence, try the next.
+			current = remainingSeqs.head;
+
+			if (current == nil) {
+				// We've exhausted all the sequences.
+				return nil;
+			}
+
+			remainingSeqs = remainingSeqs.tail;
+		}
+
+		NSAssert([current isKindOfClass:MTLSequence.class], @"Sequence being flattened contains an object that is not a sequence: %@", current);
+
+		return [MTLDynamicSequence sequenceWithHeadBlock:^{
+			return current.head;
+		} tailBlock:^{
+			return nextSequence(current.tail, remainingSeqs);
+		}];
+	} copy];
+
+	return nextSequence(self.head, self.tail);
 }
 
 #pragma mark NSCopying

@@ -33,11 +33,21 @@
 // Returns a sequence consisting of a single object.
 + (MTLSequence *)sequenceWithObject:(id)obj;
 
+// Returns a sequence consisting of the objects in the given sequences, lazily
+// appended.
++ (MTLSequence *)sequenceWithConcatenatedSequences:(NSArray *)seqs;
+
 // Returns the receiver with `obj` prepended to the sequence.
 - (MTLSequence *)sequenceByPrependingObject:(id)obj;
 
 // Returns all but the first `count` objects in the sequence. If `count` exceeds
 // the number of items in the sequence, nil is returned.
 - (MTLSequence *)drop:(NSUInteger)count;
+
+// Flattens a sequence of sequences.
+//
+// Returns a sequence consisting of the concatenated sequences obtained from the
+// receiver.
+- (MTLSequence *)flattenedSequence;
 
 @end
