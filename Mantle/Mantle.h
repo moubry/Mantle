@@ -21,4 +21,5 @@
 #import "NSOrderedSet+MTLSequenceAdditions.h"
 #import "NSSet+MTLHigherOrderAdditions.h"
 #import "NSSet+MTLSequenceAdditions.h"
+#import "NSString+MTLSequenceAdditions.h"
 #import "NSValueTransformer+MTLPredefinedTransformerAdditions.h"

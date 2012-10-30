@@ -36,6 +36,11 @@
 		D011F63D163F4E1B0011B2F3 /* NSDictionary+MTLSequenceAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F63B163F4E1B0011B2F3 /* NSDictionary+MTLSequenceAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D011F63E163F4E1B0011B2F3 /* NSDictionary+MTLSequenceAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D011F63C163F4E1B0011B2F3 /* NSDictionary+MTLSequenceAdditions.m */; };
 		D011F63F163F4E1B0011B2F3 /* NSDictionary+MTLSequenceAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D011F63C163F4E1B0011B2F3 /* NSDictionary+MTLSequenceAdditions.m */; };
+		D011F643163F51130011B2F3 /* MTLStringSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = D011F641163F51120011B2F3 /* MTLStringSequence.m */; };
+		D011F644163F51130011B2F3 /* MTLStringSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = D011F641163F51120011B2F3 /* MTLStringSequence.m */; };
+		D011F647163F547A0011B2F3 /* NSString+MTLSequenceAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F645163F547A0011B2F3 /* NSString+MTLSequenceAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D011F648163F547A0011B2F3 /* NSString+MTLSequenceAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D011F646163F547A0011B2F3 /* NSString+MTLSequenceAdditions.m */; };
+		D011F649163F547A0011B2F3 /* NSString+MTLSequenceAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D011F646163F547A0011B2F3 /* NSString+MTLSequenceAdditions.m */; };
 		D042FC4A15F72B23004E8054 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D042FC4815F72B23004E8054 /* InfoPlist.strings */; };
 		D042FC5615F72B23004E8054 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D042FC5515F72B23004E8054 /* SenTestingKit.framework */; };
 		D042FC5A15F72B23004E8054 /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D042FC3C15F72B23004E8054 /* Mantle.framework */; };
@@ -233,6 +238,10 @@
 		D011F627163F4D510011B2F3 /* NSOrderedSet+MTLSequenceAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSOrderedSet+MTLSequenceAdditions.m"; sourceTree = "<group>"; };
 		D011F63B163F4E1B0011B2F3 /* NSDictionary+MTLSequenceAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+MTLSequenceAdditions.h"; sourceTree = "<group>"; };
 		D011F63C163F4E1B0011B2F3 /* NSDictionary+MTLSequenceAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+MTLSequenceAdditions.m"; sourceTree = "<group>"; };
+		D011F640163F51120011B2F3 /* MTLStringSequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTLStringSequence.h; sourceTree = "<group>"; };
+		D011F641163F51120011B2F3 /* MTLStringSequence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTLStringSequence.m; sourceTree = "<group>"; };
+		D011F645163F547A0011B2F3 /* NSString+MTLSequenceAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MTLSequenceAdditions.h"; sourceTree = "<group>"; };
+		D011F646163F547A0011B2F3 /* NSString+MTLSequenceAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MTLSequenceAdditions.m"; sourceTree = "<group>"; };
 		D042FC3C15F72B23004E8054 /* Mantle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Mantle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D042FC4415F72B23004E8054 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D042FC4715F72B23004E8054 /* Mantle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mantle-Info.plist"; sourceTree = "<group>"; };
@@ -351,6 +360,8 @@
 				D011F5E3163F48300011B2F3 /* MTLEmptySequence.m */,
 				D011F5DC163F45980011B2F3 /* MTLArraySequence.h */,
 				D011F5DD163F45980011B2F3 /* MTLArraySequence.m */,
+				D011F640163F51120011B2F3 /* MTLStringSequence.h */,
+				D011F641163F51120011B2F3 /* MTLStringSequence.m */,
 			);
 			name = Sequences;
 			sourceTree = "<group>";
@@ -550,6 +561,8 @@
 				D090E62D15F730D1005282F9 /* NSSet+MTLHigherOrderAdditions.m */,
 				D011F621163F4CEA0011B2F3 /* NSSet+MTLSequenceAdditions.h */,
 				D011F622163F4CEA0011B2F3 /* NSSet+MTLSequenceAdditions.m */,
+				D011F645163F547A0011B2F3 /* NSString+MTLSequenceAdditions.h */,
+				D011F646163F547A0011B2F3 /* NSString+MTLSequenceAdditions.m */,
 				D0F117471614C5600092520B /* NSValueTransformer+MTLPredefinedTransformerAdditions.h */,
 				D0F117481614C5600092520B /* NSValueTransformer+MTLPredefinedTransformerAdditions.m */,
 			);
@@ -615,6 +628,7 @@
 				D011F623163F4CEA0011B2F3 /* NSSet+MTLSequenceAdditions.h in Headers */,
 				D011F628163F4D510011B2F3 /* NSOrderedSet+MTLSequenceAdditions.h in Headers */,
 				D011F63D163F4E1B0011B2F3 /* NSDictionary+MTLSequenceAdditions.h in Headers */,
+				D011F647163F547A0011B2F3 /* NSString+MTLSequenceAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -876,6 +890,8 @@
 				D011F624163F4CEA0011B2F3 /* NSSet+MTLSequenceAdditions.m in Sources */,
 				D011F629163F4D510011B2F3 /* NSOrderedSet+MTLSequenceAdditions.m in Sources */,
 				D011F63E163F4E1B0011B2F3 /* NSDictionary+MTLSequenceAdditions.m in Sources */,
+				D011F643163F51130011B2F3 /* MTLStringSequence.m in Sources */,
+				D011F648163F547A0011B2F3 /* NSString+MTLSequenceAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -920,6 +936,8 @@
 				D011F625163F4CEA0011B2F3 /* NSSet+MTLSequenceAdditions.m in Sources */,
 				D011F62A163F4D510011B2F3 /* NSOrderedSet+MTLSequenceAdditions.m in Sources */,
 				D011F63F163F4E1B0011B2F3 /* NSDictionary+MTLSequenceAdditions.m in Sources */,
+				D011F644163F51130011B2F3 /* MTLStringSequence.m in Sources */,
+				D011F649163F547A0011B2F3 /* NSString+MTLSequenceAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
