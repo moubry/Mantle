@@ -30,6 +30,12 @@
 // Returns an empty sequence.
 + (MTLSequence *)emptySequence;
 
+// Returns a sequence consisting of a single object.
++ (MTLSequence *)sequenceWithObject:(id)obj;
+
+// Returns the receiver with `obj` prepended to the sequence.
+- (MTLSequence *)sequenceByPrependingObject:(id)obj;
+
 // Returns all but the first `count` objects in the sequence. If `count` exceeds
 // the number of items in the sequence, nil is returned.
 - (MTLSequence *)drop:(NSUInteger)count;

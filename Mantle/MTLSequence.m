@@ -8,6 +8,7 @@
 
 #import "MTLSequence.h"
 #import "MTLArraySequence.h"
+#import "MTLDynamicSequence.h"
 #import "MTLEmptySequence.h"
 
 @implementation MTLSequence
@@ -16,6 +17,12 @@
 
 + (MTLSequence *)emptySequence {
 	return MTLEmptySequence.emptySequence;
+}
+
++ (MTLSequence *)sequenceWithObject:(id)obj {
+	return [MTLDynamicSequence sequenceWithHeadBlock:^{
+		return obj;
+	} tailBlock:nil];
 }
 
 #pragma mark Class cluster primitives
@@ -48,6 +55,14 @@
 	}
 
 	return seq;
+}
+
+- (MTLSequence *)sequenceByPrependingObject:(id)obj {
+	return [MTLDynamicSequence sequenceWithHeadBlock:^{
+		return obj;
+	} tailBlock:^{
+		return self;
+	}];
 }
 
 #pragma mark NSCopying
